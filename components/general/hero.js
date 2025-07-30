@@ -78,7 +78,7 @@ export default function HeroComponent() {
                 className="flex bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 grou "
               >
                 Solicitar Presupuesto
-                <ArrowRight className=" ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight className=" ml-2 group-hover:translate-x-1 transition-transform " size={20} />
               </button>
               <button
                 type="button"
