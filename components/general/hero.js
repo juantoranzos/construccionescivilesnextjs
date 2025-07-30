@@ -75,10 +75,10 @@ export default function HeroComponent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 lg:mb-20 animate-fade-in-up delay-400">
               <button
                 type="button"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 grou "
+                className="flex bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 grou "
               >
                 Solicitar Presupuesto
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight className=" ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </button>
               <button
                 type="button"

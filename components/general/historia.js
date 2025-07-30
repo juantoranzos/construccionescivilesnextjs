@@ -151,7 +151,8 @@ const HistoriaComponent = () => {
               nos posiciona para liderar la próxima generación de construcción minera.
             </p>
             <div className="my-6 h-px bg-slate-600"></div>
-            <p className="text-slate-300 italic">"Construyendo el futuro de la minería, un proyecto a la vez."</p>
+            <p className="text-slate-300 italic">&quot;Construyendo el futuro de la minería, un proyecto a la vez.&quot;</p>
+
           </div>
         </div>
       </div>
