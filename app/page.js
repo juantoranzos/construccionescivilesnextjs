@@ -1,4 +1,6 @@
 
+import ContactoComponent from "@/components/general/contacto";
+import EquipamientoComponent from "@/components/general/equipamiento";
 import HeroComponent from "@/components/general/hero";
 import HistoriaComponent from "@/components/general/historia";
 import ProyectosComponent from "@/components/general/proyectos";
@@ -11,6 +13,8 @@ export default function Home() {
     <ServiciosComponent/>
     <HistoriaComponent/>
     <ProyectosComponent/>
+    <EquipamientoComponent/>
+    <ContactoComponent/>
    </div>
   );
 }
