@@ -1,6 +1,8 @@
 "use client"
 
 import { HardHat, Truck, Mountain, Shield, Settings, Building2 } from "lucide-react"
+import Link from "next/link"
+
 
 export default function ServiciosComponent() {
   const services = [
@@ -129,9 +131,9 @@ export default function ServiciosComponent() {
                 </div>
 
                 {/* Button */}
-                <button className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:from-cyan-600 group-hover:to-blue-700">
+                <Link href="#contacto" className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:from-cyan-600 group-hover:to-blue-700">
                   Solicitar más información
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -140,9 +142,9 @@ export default function ServiciosComponent() {
           <div className="text-center mt-16 lg:mt-20">
             <div className="animate-fade-in-up delay-600">
               <p className="text-gray-300 text-lg mb-6">¿No encuentras el servicio que necesitas?</p>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Link href="#contacto" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" href="#contacto">
                 Consulta Personalizada
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,12 @@
 import proyecto1 from "@/public/proyecto1.webp"
-import proyecto2 from "@/public/proyecto2.webp";
+import proyecto12 from "@/public/proyecto12.png";
 import proyecto3 from "@/public/proyecto3.webp";
+import proyecto4 from "@/public/proyecto4.png";
+import proyecto5 from "@/public/proyecto5.png";
+import proyecto6 from "@/public/proyecto6.png";
+import proyecto44 from "@/public/proyecto44.png";
+
+
 import { MapPin, Building2, Calendar, Hourglass } from 'lucide-react';
 export const iconos = {
     ubicacion: MapPin,
@@ -11,71 +17,72 @@ export const iconos = {
  export const proyectos = [
   {
     id: 1,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Planta Procesadora Tres Quebradas – Fase 1",
+    location: "Fiambalá, Catamarca Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image: proyecto1,
+      "Construcción de planta de procesamiento de litio con capacidad inicial de 20.000 tys de carbonato, en zona de altura complejo logístico.",
+    image: proyecto12,
     category: "Construcción Minera",
-    year: "2023",
-    duration: "18 meses",
+    year: "2025",
+    duration: "24 meses",
   },
   {
     id: 2,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Campamento Modular Salar del Hombre Muerto",
+    location: "Salar del Hombre Muerto, Catamarca Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image: proyecto2,
-    category: "Construcción Minera",
-    year: "2023",
-    duration: "18 meses",
+      "Montaje de campamento modular para personal de operación minera en zona remota de alta altitud, con módulos habitacionales, comedor y servicios logísticos.",
+    image: proyecto3,
+    category: "Montaje de Edificios",
+    year: "2024",
+    duration: "12 meses",
   },
   {
     id: 3,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Infraestructura de Vías de Acceso – Proyecto Litio Antofalla",
+    location: "Antofalla, Catamarca Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image: proyecto3,
-    category: "Construcción Minera",
+      "Construcción de caminos internos y plataformas de circulación para transporte de cargas pesadas y maquinaria en proyecto de litio.",
+    image: proyecto1,
+    category: "Obra Vial Minera",
     year: "2023",
-    duration: "18 meses",
+    duration: "15 meses",
   },
   {
     id: 4,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Centro de Mantenimiento de Maquinaria Pesada – Belen Catamarca",
+    location: "Belén, Catamarca Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image: proyecto1,
-    category: "Construcción Minera",
-    year: "2023",
-    duration: "18 meses",
+      "Construcción de taller especializado para mantenimiento de maquinaria minera pesada, con zonas de reparación, almacenaje y soporte técnico.",
+    image: proyecto44,
+    category: "Construcción Industrial",
+    year: "2022",
+    duration: "10 meses",
   },
   {
     id: 5,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Expansión Base de Operaciones Mina de Metales – NOA",
+    location: "Tinogasta, Catamarca Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image: proyecto2,
+      "Expansión de base operativa, obras civiles complementarias, plataformas y habilitación de instalaciones para operaciones de metalurgia.",
+    image: proyecto5,
     category: "Construcción Minera",
     year: "2023",
     duration: "18 meses",
   },
   {
     id: 6,
-    title: "Expansión mina el teniente",
-    location: "Rancagua Chile",
+    title: "Construcción de Campamento de Apoyo y Logística – Proyecto Piloto Litio",
+    location: "Salinas Grandes, Jujuy Argentina",
     description:
-      "Construcción de infraestructura para expansión de operaciones mineras, incluyendo túneles de acceso y plataformas",
-    image:proyecto3,
-    category: "Construcción Minera",
-    year: "2023",
-    duration: "18 meses",
+      "Construcción y equipamiento de campamento y centro logístico para proyecto piloto de litio con infraestructura de alojamiento, oficinas y servicios auxiliares.",
+    image: proyecto6,
+    category: "Montaje de Edificios",
+    year: "2024",
+    duration: "14 meses",
   },
-]
+];
+
    export const hitos = [
     {
       año: "2006",

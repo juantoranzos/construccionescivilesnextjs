@@ -1,13 +1,15 @@
 "use client"
 
 import { Truck, ConeIcon as Crane, Drill, Hammer, Wrench, Zap } from "lucide-react"
+import Link from "next/link";
+import { FaTruckPickup } from "react-icons/fa";
 
 export default function EquipamientoComponent() {
   const equipment = [
     {
-      icon: Crane,
+      icon: FaTruckPickup,
       name: "Camionetas 4x4",
-      capacity: "2-10 Toneladas",
+      capacity: "1-2 Toneladas",
       description: "Grúas de alta capacidad para construcción en altura y montaje de estructuras pesadas.",
       specs: ["Alcance: 40-60m", "Rotación 360°", "Cabina climatizada"],
       delay: "0ms",
@@ -183,7 +185,7 @@ export default function EquipamientoComponent() {
                     <button className="flex-1 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:from-cyan-600 group-hover:to-blue-700 text-sm">
                       Ver Detalles
                     </button>
-                    <button className="flex-1 border-2 border-slate-300 text-slate-700 hover:border-cyan-400 hover:text-cyan-600 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 bg-transparent text-sm">
+                    <button className="flex-1 border-2 border-slate-300 text-slate-700 hover:border-cyan-400 hover:text-cyan-600 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 bg-transparent text-sm" href="contacto">
                       Solicitar
                     </button>
                   </div>
@@ -217,9 +219,9 @@ export default function EquipamientoComponent() {
           <div className="text-center mt-16 lg:mt-20">
             <div className="animate-fade-in-up delay-1000">
               <p className="text-gray-300 text-lg mb-6">¿Necesitas equipamiento especializado para tu proyecto?</p>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Link href="#/contacto" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Consultar Disponibilidad
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { MapPin, ArrowRight, Building, Users, Award, Calendar } from "lucide-react"
+import Link from "next/link"
 
 export default function HeroComponent() {
   const stats = [
@@ -73,19 +74,21 @@ export default function HeroComponent() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 lg:mb-20 animate-fade-in-up delay-400">
-              <button
+              <Link
+              href="#contacto"
                 type="button"
                 className="flex bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 grou "
               >
                 Solicitar Presupuesto
                 <ArrowRight className=" ml-2 group-hover:translate-x-1 transition-transform " size={20} />
-              </button>
-              <button
+              </Link>
+              <Link
+              href="#proyectos"
                 type="button"
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 bg-transparent"
               >
                 Ver Proyectos
-              </button>
+              </Link>
             </div>
 
             {/* Stats */}
