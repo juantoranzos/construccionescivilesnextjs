@@ -1,7 +1,9 @@
 "use client"
+import logo from "@/public/logo1.webp"
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Navegacion() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,7 +48,7 @@ export default function Navegacion() {
             {/* Logo */}
             <div className="flex items-center space-x-3 animate-fade-in">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">FC</span>
+                <Image src={logo} alt="logoconstruccionesciviles" className="rounded"></Image>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-white font-bold text-lg lg:text-xl">CONSTRUCCIONES CIVILES</h1>

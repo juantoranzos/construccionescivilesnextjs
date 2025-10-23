@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from "lucide-react"
+import Link from "next/link"
 
 export default function ContactoComponent() {
   const [formData, setFormData] = useState({
@@ -31,25 +32,25 @@ export default function ContactoComponent() {
     {
       icon: MapPin,
       title: "Dirección",
-      content: "Av. Principal 1234, Santa María, Catamarca, Argentina",
+      content: "Dr Fernandez, K4139 Santa María, Catamarca",
       delay: "0ms",
     },
     {
       icon: Phone,
       title: "Teléfono",
-      content: "+54 3838 123-456",
+      content: "+54 3838 602867",
       delay: "100ms",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@construccionesciviles.com",
+      content: "luisguaymas@construccionesciviles.com",
       delay: "200ms",
     },
     {
       icon: Clock,
       title: "Horarios",
-      content: "Lun - Vie: 8:00 - 18:00\nSáb: 8:00 - 12:00",
+      content: "Lun - Vie: 8:00 - 14:00\nSáb: 8:00 - 12:00",
       delay: "300ms",
     },
   ]
@@ -259,22 +260,20 @@ export default function ContactoComponent() {
                 </h3>
 
                 {/* Map Placeholder */}
-                <div className="relative h-64 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl overflow-hidden mb-6">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="mx-auto mb-2 text-cyan-600" size={48} />
-                      <p className="text-slate-600 font-medium">Santa María, Catamarca</p>
-                      <p className="text-slate-500 text-sm">Av. Principal 1234</p>
-                    </div>
-                  </div>
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 left-4 w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
-                  <div className="absolute bottom-4 right-4 w-2 h-2 bg-blue-500 rounded-full animate-ping delay-1000"></div>
-                </div>
+               <div className="relative h-64 rounded-xl overflow-hidden mb-6">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.454588720288!2d-66.0458044163999!3d-26.697920674759345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9421e54ab468302f%3A0xe4606b00557d1010!2sGuaymas%20Construcciones%20Civiles!5e0!3m2!1ses-419!2sar!4v1705972910963!5m2!1ses-419!2sar"
+    style={{ border: 0, width: '100%', height: '100%' }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
 
-                <button className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
+                <Link href={'https://www.google.com/maps/place/Guaymas+Construcciones+Civiles/@-26.697923,-66.044451,15z/data=!4m6!3m5!1s0x9421e54ab468302f:0xe4606b00557d1010!8m2!3d-26.6979232!4d-66.0444511!16s%2Fg%2F11gm78ghyb?hl=es-419&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D'} target="_blank" className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
                   Ver en Google Maps
-                </button>
+                </Link>
               </div>
 
               {/* Contact Information */}
