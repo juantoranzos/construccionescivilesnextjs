@@ -8,6 +8,59 @@ import proyecto44 from "@/public/proyecto44.png";
 
 
 import { MapPin, Building2, Calendar, Hourglass } from 'lucide-react';
+import { FaTruckPickup } from "react-icons/fa";
+import { Truck, ConeIcon as Crane, Drill, Hammer, Wrench, Zap } from "lucide-react"
+
+export const equipment = [
+    {
+      icon: FaTruckPickup,
+      name: "Camionetas 4x4",
+      capacity: "1-2 Toneladas",
+      description: "Grúas de alta capacidad para construcción en altura y montaje de estructuras pesadas.",
+      specs: ["Alcance: 40-60m", "Rotación 360°", "Cabina climatizada"],
+      delay: "0ms",
+    },
+    {
+      icon: Truck,
+      name: "Camiones de Carga",
+      capacity: "15-40 Toneladas",
+      description: "Flota de camiones especializados para transporte de materiales en terrenos difíciles.",
+      specs: ["Tracción 6x4", "Volquete hidráulico", "Sistema GPS"],
+      delay: "100ms",
+    },
+    {
+      icon: Drill,
+      name: "Perforadoras",
+      capacity: "Hasta 30m profundidad",
+      description: "Equipos de perforación para cimentaciones y exploraciones geotécnicas.",
+      specs: ["Diámetro: 0.5-2m", "Sistema rotativo", "Control automático"],
+      delay: "200ms",
+    },
+    {
+      icon: Hammer,
+      name: "Excavadoras",
+      capacity: "20-45 Toneladas",
+      description: "Excavadoras de alta potencia para movimiento de tierra y demoliciones.",
+      specs: ["Motor 300HP", "Brazo extensible", "Cabina ROPS/FOPS"],
+      delay: "300ms",
+    },
+    {
+      icon: Wrench,
+      name: "Compactadoras",
+      capacity: "10-25 Toneladas",
+      description: "Equipos de compactación para preparación de terrenos y pavimentación.",
+      specs: ["Rodillo vibratorio", "Sistema de riego", "Control remoto"],
+      delay: "400ms",
+    },
+    {
+      icon: Zap,
+      name: "Generadores",
+      capacity: "50-500 KVA",
+      description: "Grupos electrógenos para suministro de energía en obras remotas.",
+      specs: ["Motor Diesel", "Arranque automático", "Panel de control"],
+      delay: "500ms",
+    },
+  ]
 export const iconos = {
     ubicacion: MapPin,
     construccion: Building2,

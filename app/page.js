@@ -5,6 +5,7 @@ import HeroComponent from "@/components/general/hero";
 import HistoriaComponent from "@/components/general/historia";
 import ProyectosComponent from "@/components/general/proyectos";
 import ServiciosComponent from "@/components/general/servicios";
+import { WhatsappLink } from "@/components/general/wsp";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <ProyectosComponent/>
     <EquipamientoComponent/>
     <ContactoComponent/>
+    <WhatsappLink/>
    </div>
   );
 }

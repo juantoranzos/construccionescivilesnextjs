@@ -1,60 +1,8 @@
 "use client"
-
-import { Truck, ConeIcon as Crane, Drill, Hammer, Wrench, Zap } from "lucide-react"
 import Link from "next/link";
-import { FaTruckPickup } from "react-icons/fa";
-
+import { equipment } from "@/utils/help";
 export default function EquipamientoComponent() {
-  const equipment = [
-    {
-      icon: FaTruckPickup,
-      name: "Camionetas 4x4",
-      capacity: "1-2 Toneladas",
-      description: "Grúas de alta capacidad para construcción en altura y montaje de estructuras pesadas.",
-      specs: ["Alcance: 40-60m", "Rotación 360°", "Cabina climatizada"],
-      delay: "0ms",
-    },
-    {
-      icon: Truck,
-      name: "Camiones de Carga",
-      capacity: "15-40 Toneladas",
-      description: "Flota de camiones especializados para transporte de materiales en terrenos difíciles.",
-      specs: ["Tracción 6x4", "Volquete hidráulico", "Sistema GPS"],
-      delay: "100ms",
-    },
-    {
-      icon: Drill,
-      name: "Perforadoras",
-      capacity: "Hasta 30m profundidad",
-      description: "Equipos de perforación para cimentaciones y exploraciones geotécnicas.",
-      specs: ["Diámetro: 0.5-2m", "Sistema rotativo", "Control automático"],
-      delay: "200ms",
-    },
-    {
-      icon: Hammer,
-      name: "Excavadoras",
-      capacity: "20-45 Toneladas",
-      description: "Excavadoras de alta potencia para movimiento de tierra y demoliciones.",
-      specs: ["Motor 300HP", "Brazo extensible", "Cabina ROPS/FOPS"],
-      delay: "300ms",
-    },
-    {
-      icon: Wrench,
-      name: "Compactadoras",
-      capacity: "10-25 Toneladas",
-      description: "Equipos de compactación para preparación de terrenos y pavimentación.",
-      specs: ["Rodillo vibratorio", "Sistema de riego", "Control remoto"],
-      delay: "400ms",
-    },
-    {
-      icon: Zap,
-      name: "Generadores",
-      capacity: "50-500 KVA",
-      description: "Grupos electrógenos para suministro de energía en obras remotas.",
-      specs: ["Motor Diesel", "Arranque automático", "Panel de control"],
-      delay: "500ms",
-    },
-  ]
+  
 
   return (
     <>
@@ -182,12 +130,9 @@ export default function EquipamientoComponent() {
 
                   {/* Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:from-cyan-600 group-hover:to-blue-700 text-sm">
-                      Ver Detalles
-                    </button>
-                    <button className="flex-1 border-2 border-slate-300 text-slate-700 hover:border-cyan-400 hover:text-cyan-600 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 bg-transparent text-sm" href="contacto">
+                    <Link href="#contacto"className="flex-1 border-2 border-slate-300 text-slate-700 hover:border-cyan-400 hover:text-cyan-600 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 bg-transparent text-sm text-center">
                       Solicitar
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -200,7 +145,7 @@ export default function EquipamientoComponent() {
               {[
                 { value: "50+", label: "Equipos Disponibles" },
                 { value: "24/7", label: "Soporte Técnico" },
-                { value: "15+", label: "Años de Experiencia" },
+                { value: "18+", label: "Años de Experiencia" },
                 { value: "100%", label: "Mantenimiento Garantizado" },
               ].map((stat, index) => (
                 <div
@@ -219,7 +164,7 @@ export default function EquipamientoComponent() {
           <div className="text-center mt-16 lg:mt-20">
             <div className="animate-fade-in-up delay-1000">
               <p className="text-gray-300 text-lg mb-6">¿Necesitas equipamiento especializado para tu proyecto?</p>
-              <Link href="#/contacto" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Link href="#contacto" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Consultar Disponibilidad
               </Link>
             </div>

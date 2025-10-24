@@ -4,6 +4,7 @@ import logo from "@/public/logo1.webp"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Navegacion() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,12 +48,12 @@ export default function Navegacion() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3 animate-fade-in">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Link href={"/"} className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                 <Image src={logo} alt="logoconstruccionesciviles" className="rounded"></Image>
-              </div>
-              <div className="hidden sm:block">
+              </Link>
+              <Link href={"/"} className="hidden sm:block">
                 <h1 className="text-white font-bold text-lg lg:text-xl">CONSTRUCCIONES CIVILES</h1>
-              </div>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
