@@ -28,7 +28,7 @@ export default function ServiciosComponent() {
         .delay-500 { animation-delay: 500ms; }
       `}</style>
 
-      <section className="py-16 lg:py-24 relative bg-gradient-to-br from-blue-800 to-blue-950 text-white">
+      <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-blue-800 to-blue-950 text-white">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-10 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>

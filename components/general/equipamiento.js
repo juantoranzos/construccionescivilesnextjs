@@ -57,7 +57,7 @@ export default function EquipamientoComponent() {
         .delay-2000 { animation-delay: 2000ms; }
       `}</style>
 
-      <section className="py-16 lg:py-24 relative bg-gradient-to-br from-blue-800 to-blue-950 text-white" id="equipamiento">
+      <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-blue-800 to-blue-950 text-white" id="equipamiento">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-32 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
