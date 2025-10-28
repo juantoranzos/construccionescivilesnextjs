@@ -122,7 +122,7 @@ export default function ContactoComponent() {
       `}</style>
 
       <section
-        className="py-16 lg:py-24 relative bg-gradient-to-br from-blue-800 to-blue-950"
+        className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-blue-800 to-blue-950"
         id="contacto"
       >
         {/* Background elements */}
@@ -283,7 +283,7 @@ export default function ContactoComponent() {
                         <h4 className="font-semibold text-slate-800 mb-1">
                           {info.title}
                         </h4>
-                        <p className="text-gray-600 whitespace-pre-line">
+                        <p className="text-gray-600 whitespace-pre-line break-words">
                           {info.content}
                         </p>
                       </div>

@@ -41,16 +41,16 @@ export default function HeroComponent() {
         .delay-3000 { animation-delay: 3000ms; }
       `}</style>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
       {/* Hero Section */}
-      <div className="relative pt-20 lg:pt-24 pb-16 lg:pb-24 bg-gradient-to-br from-blue-950 to-blue-800 text-white ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-20 lg:pt-24 pb-16 lg:pb-24 bg-gradient-to-br from-blue-950 to-blue-800 text-white">
+        {/* Animated background elements */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 lg:mb-8 animate-fade-in-up">
@@ -109,11 +109,11 @@ export default function HeroComponent() {
         </div>
 
         {/* Floating elements */}
-        <div className="absolute top-1/4 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute top-1/3 right-20 w-3 h-3 bg-blue-500 rounded-full animate-ping delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-ping delay-3000"></div>
-        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-300 rounded-full animate-ping delay-1000"></div>
-      </div>
+        <div className="pointer-events-none absolute top-1/4 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
+        <div className="pointer-events-none absolute top-1/3 right-20 w-3 h-3 bg-blue-500 rounded-full animate-ping delay-2000"></div>
+        <div className="pointer-events-none absolute bottom-1/4 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-ping delay-3000"></div>
+        <div className="pointer-events-none absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-300 rounded-full animate-ping delay-1000"></div>
+      </section>
     </>
   )
 }
