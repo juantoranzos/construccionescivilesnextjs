@@ -277,7 +277,7 @@ export default function ContactoComponent() {
                       style={{ animationDelay: info.delay }}
                     >
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-                        <info.icon className="text-white" size={20} />
+                        <info.icon className="text-white" size={30} />
                       </div>
                       <div>
                         <h4 className="font-semibold text-slate-800 mb-1">
