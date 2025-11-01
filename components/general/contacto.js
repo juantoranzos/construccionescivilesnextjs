@@ -263,13 +263,13 @@ export default function ContactoComponent() {
               </div>
 
               {/* Contact Information */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
-                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl  shadow-xl border border-white/20">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center mt-2 pt-2 px-4">
                   <User className="mr-3 text-cyan-600" size={28} />
                   Información de Contacto
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-6 space-x-5">
                   {contactInfo.map((info, index) => (
                     <div
                       key={info.title}
