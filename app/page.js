@@ -12,8 +12,8 @@ export default function Home() {
    <div>
     <HeroComponent/>
     <ServiciosComponent/>
-    <HistoriaComponent/>
     <ProyectosComponent/>
+    <HistoriaComponent/>
     <EquipamientoComponent/>
     <ContactoComponent/>
     <WhatsappLink/>

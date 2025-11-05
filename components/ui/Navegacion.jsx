@@ -1,58 +1,77 @@
-"use client"
-import logo from "@/public/logo1.webp"
+"use client";
+import logo from "@/public/logo1.webp";
 
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navegacion() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "SERVICIOS", href: "#servicios" },
-    { name: "HISTORIA", href: "#historia" },
     { name: "PROYECTOS", href: "#proyectos" },
+    { name: "HISTORIA", href: "#historia" },
     { name: "EQUIPAMIENTO", href: "#equipamiento" },
     { name: "CONTACTO", href: "#contacto" },
-  ]
+  ];
 
   return (
     <>
       <style jsx>{`
         @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
-        
+
         .animate-fade-in {
           animation: fade-in 1s ease-out forwards;
         }
       `}</style>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-slate-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled && window.innerWidth > 768
+            ? "bg-white/20 backdrop-blur-xl backdrop-saturate-150 border-b border-white/30 shadow-[0_4px_30px_rgba(0,0,0,0.1)] mx-[154.5px] mt-2 rounded"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3 animate-fade-in">
-              <Link href={"/"} className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Image src={logo} alt="logoconstruccionesciviles" className="rounded"></Image>
+              <Link
+                href={"/"}
+                className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg"
+              >
+                <Image
+                  src={logo}
+                  alt="logoconstruccionesciviles"
+                  className="rounded"
+                ></Image>
               </Link>
               <Link href={"/"} className="hidden sm:block">
-                <h1 className="text-white font-bold text-lg lg:text-xl">CONSTRUCCIONES CIVILES</h1>
+                <h1
+                  className={`${
+                    isScrolled ? "text-gray-700" : "text-white"
+                  } font-bold text-lg lg:text-2xl`}
+                >
+                  CONSTRUCCIONES CIVILES
+                </h1>
               </Link>
             </div>
 
@@ -62,7 +81,12 @@ export default function Navegacion() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-cyan-400 font-medium transition-all duration-300 hover:scale-105 relative group animate-fade-in"
+                  className={`font-medium transition-all duration-300 hover:scale-105 relative group animate-fade-in 
+  ${
+    isScrolled
+      ? "text-gray-700 hover:text-cyan-600"
+      : "text-gray-300 hover:text-cyan-400"
+  }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
@@ -102,5 +126,5 @@ export default function Navegacion() {
         </div>
       </nav>
     </>
-  )
+  );
 }

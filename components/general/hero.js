@@ -63,7 +63,7 @@ export default function HeroComponent() {
 
             {/* Subtitle */}
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-              Más de 18 años de experiencia y 300 proyectos exitosos en el Noroeste Argentino y zona Precordillerona.
+              Más de 18 años de experiencia y 300 proyectos exitosos en el Noroeste Argentino y zona Precordillerana.
             </p>
 
             {/* Location */}

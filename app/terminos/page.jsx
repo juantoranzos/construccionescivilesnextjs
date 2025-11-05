@@ -3,10 +3,10 @@ import Script from "next/script";
 
 const SITE_NAME = "ConstruccionesCiviles.com"; // TODO
 const LEGAL_NAME = "Construcciones Civiles S.R.L."; // TODO: razón social o nombre del responsable
-const CUIT = "30-00000000-0"; // TODO
+const CUIT = "20-17289258-3"; // TODO
 const CONTACT_EMAIL = "legal@construccionesciviles.com"; // TODO
-const CONTACT_PHONE = "+54 381 000 0000"; // TODO
-const POSTAL_ADDRESS = "Av. Ejemplo 123, San Miguel de Tucumán, Tucumán, Argentina"; // TODO
+const CONTACT_PHONE = "+54 3838 602867"; // TODO
+const POSTAL_ADDRESS = "Dr Fernandez, K4139 Santa María, Catamarca"; // TODO
 const SITE_URL = "https://construccionesciviles.com"; // TODO
 const LAST_UPDATED = "23/10/2025"; // actualizar cuando cambie
 

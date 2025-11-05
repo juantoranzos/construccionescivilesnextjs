@@ -5,15 +5,20 @@ import proyecto4 from "@/public/proyecto4.png";
 import proyecto5 from "@/public/proyecto5.png";
 import proyecto6 from "@/public/proyecto6.png";
 import proyecto44 from "@/public/proyecto44.png";
+import retro from "@/public/retro.png";
 
 
-import { MapPin, Building2, Calendar, Hourglass } from 'lucide-react';
-import { FaTruckPickup } from "react-icons/fa";
+import { MapPin, Building2, Calendar, Hourglass, Bus, HardHat } from 'lucide-react';
+import { LiaTruckMonsterSolid } from "react-icons/lia";
+import { TbCarCrane } from "react-icons/tb";
+import { LuTruck } from "react-icons/lu";
+
+
 import { Truck, ConeIcon as Crane, Drill, Hammer, Wrench, Zap } from "lucide-react"
 
 export const equipment = [
     {
-      icon: FaTruckPickup,
+      icon: LiaTruckMonsterSolid,
       name: "Camionetas 4x4",
       capacity: "1-2 Toneladas",
       description: "Grúas de alta capacidad para construcción en altura y montaje de estructuras pesadas.",
@@ -21,7 +26,7 @@ export const equipment = [
       delay: "0ms",
     },
     {
-      icon: Truck,
+      icon: LuTruck,
       name: "Camiones de Carga",
       capacity: "15-40 Toneladas",
       description: "Flota de camiones especializados para transporte de materiales en terrenos difíciles.",
@@ -29,11 +34,11 @@ export const equipment = [
       delay: "100ms",
     },
     {
-      icon: Drill,
-      name: "Perforadoras",
+      icon: HardHat,
+      name: "Retroexcavadoras",
       capacity: "Hasta 30m profundidad",
-      description: "Equipos de perforación para cimentaciones y exploraciones geotécnicas.",
-      specs: ["Diámetro: 0.5-2m", "Sistema rotativo", "Control automático"],
+      description: "Máquina versátil de construcción que excava, carga y nivela terrenos con gran precisión y eficiencia.",
+      specs: ["Peso operativo: entre 6.000 y 9.000 kg.", "Profundidad de excavación: de 4 a 6 metros.", "Tracción: 4x2 o 4x4 según el terreno."],
       delay: "200ms",
     },
     {
@@ -45,11 +50,11 @@ export const equipment = [
       delay: "300ms",
     },
     {
-      icon: Wrench,
-      name: "Compactadoras",
-      capacity: "10-25 Toneladas",
+      icon: TbCarCrane,
+      name: "Grua Hidraulica",
+      capacity: "1200 Toneladas",
       description: "Equipos de compactación para preparación de terrenos y pavimentación.",
-      specs: ["Rodillo vibratorio", "Sistema de riego", "Control remoto"],
+      specs: ["Alcance Horizontal", "Ángulo de Giro", "Estabilizadores (Outriggers)"],
       delay: "400ms",
     },
     {
@@ -58,6 +63,14 @@ export const equipment = [
       capacity: "50-500 KVA",
       description: "Grupos electrógenos para suministro de energía en obras remotas.",
       specs: ["Motor Diesel", "Arranque automático", "Panel de control"],
+      delay: "500ms",
+    },
+    {
+      icon: Bus,
+      name: "Trafic",
+      capacity: " 15 Pasajeros",
+      description: "Transporte de personal para movilización en obra.",
+      specs: ["Capacidad 15 personas", "Peso 2800kg", "Asistencia a la conducción"],
       delay: "500ms",
     },
   ]
