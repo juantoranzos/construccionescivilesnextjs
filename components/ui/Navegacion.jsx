@@ -1,21 +1,19 @@
 "use client";
-import logo from "@/public/logo1.webp";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import logo from "@/public/logo1.webp";
 
 export default function Navegacion() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const navItems = [
@@ -27,104 +25,93 @@ export default function Navegacion() {
   ];
 
   return (
-    <>
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
 
-        .animate-fade-in {
-          animation: fade-in 1s ease-out forwards;
-        }
-      `}</style>
+        {/* LOGO */}
+        <Link href="/" className="flex items-center gap-3">
+          <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-cyan-400 to-blue-600">
+            <Image src={logo} alt="logo" className="rounded-xl object-cover" />
+          </div>
+          <h1
+            className={`hidden sm:block text-lg lg:text-2xl font-bold transition-colors ${
+              isScrolled ? "text-white" : "text-white"
+            }`}
+          >
+            CONSTRUCCIONES CIVILES
+          </h1>
+        </Link>
 
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled && window.innerWidth > 768
-            ? "bg-white/20 backdrop-blur-xl backdrop-saturate-150 border-b border-white/30 shadow-[0_4px_30px_rgba(0,0,0,0.1)] mx-[154.5px] mt-2 rounded"
-            : "bg-transparent"
+        {/* DESKTOP NAV */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navItems.map((item, i) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className={`text-sm font-medium transition-all relative 
+                ${isScrolled ? "text-white" : "text-gray-300"} 
+                hover:text-cyan-400`}
+            >
+              {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all group-hover:w-full"></span>
+            </a>
+          ))}
+        </div>
+
+        {/* MOBILE BUTTON */}
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          className={`lg:hidden p-2 rounded-lg transition-all ${
+            isScrolled ? "text-gray-800 hover:bg-gray-200/40" : "text-white hover:bg-white/10"
+          }`}
+        >
+          <Menu size={26} />
+        </button>
+      </nav>
+
+      {/* MOBILE OVERLAY */}
+      <div
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* MOBILE MENU DRAWER */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-slate-900/95 backdrop-blur-xl border-l border-white/10 z-50
+        transition-transform duration-500 p-6 flex flex-col gap-6 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3 animate-fade-in">
-              <Link
-                href={"/"}
-                className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg"
-              >
-                <Image
-                  src={logo}
-                  alt="logoconstruccionesciviles"
-                  className="rounded"
-                ></Image>
-              </Link>
-              <Link href={"/"} className="hidden sm:block">
-                <h1
-                  className={`${
-                    isScrolled ? "text-gray-700" : "text-white"
-                  } font-bold text-lg lg:text-2xl`}
-                >
-                  CONSTRUCCIONES CIVILES
-                </h1>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item, index) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={`font-medium transition-all duration-300 hover:scale-105 relative group animate-fade-in 
-  ${
-    isScrolled
-      ? "text-gray-700 hover:text-cyan-600"
-      : "text-gray-300 hover:text-cyan-400"
-  }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`lg:hidden transition-all duration-300 ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden bg-slate-900/95 backdrop-blur-md`}
+        {/* CLOSE BTN */}
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="self-end text-gray-300 hover:text-white transition"
         >
-          <div className="px-4 py-4 space-y-3">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block text-gray-300 hover:text-cyan-400 font-medium py-2 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
-    </>
+          <X size={28} />
+        </button>
+
+        {/* LINKS */}
+        <nav className="mt-4 flex flex-col gap-4">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-300 text-lg py-2 px-1 hover:text-cyan-400 transition-all"
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }

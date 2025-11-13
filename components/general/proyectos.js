@@ -1,83 +1,123 @@
-import Image from "next/image"
-import { MapPin, Building, Calendar, Clock } from "lucide-react"
-import { proyectos } from "@/utils/help"
-import Link from "next/link"
+"use client";
+
+import Image from "next/image";
+import { MapPin, Building, Calendar, Clock } from "lucide-react";
+import { proyectos } from "@/utils/help";
+import Link from "next/link";
 
 export default function ProyectosComponent() {
   return (
-    <div className="bg-gradient-to-br from-blue-800 to-blue-950">
-      {/* antes: h-150%  -> quitar y usar py */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white animate-fade-in-up text-center mb-8 pt-[65px]" id="proyectos">
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-            Nuestros Proyectos
-          </span>
-        </h2>
+    <section
+      id="proyectos"
+      className="relative bg-gradient-to-b from-blue-900 via-blue-950 to-blue-900 py-24 px-6 lg:px-12 text-white overflow-hidden"
+    >
+      {/* Luces de fondo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-24 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      </div>
 
-        <p className="text-center text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200 mb-12">
-          Nustros Proyectos son un testimonio de nuestra dedicación a la excelencia y la innovación en el sector minero.
-        </p>
+      <div className="relative max-w-7xl mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {proyectos.map((project) => (
+        {/* HEADER */}
+        <div className="text-center mb-20 fade-up">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              Nuestros Proyectos
+            </span>
+          </h2>
+          <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
+            Nuestros proyectos son un testimonio de nuestra excelencia, precisión y compromiso en el sector minero.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 fade-up-delay">
+          {proyectos.map((project, idx) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+              className="group relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-xl 
+              hover:shadow-2xl transition-all duration-500 fade-up"
+              style={{ animationDelay: `${idx * 150}ms` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              {/* Imagen */}
+              <div className="relative h-52 overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                {/* Overlay gradiente */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+                {/* Título sobre la imagen */}
+                <div className="absolute bottom-4 left-4 z-10">
+                  <h3 className="text-2xl font-semibold drop-shadow-xl">
+                    {project.title}
+                  </h3>
+                </div>
               </div>
 
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
+              {/* Contenido */}
+              <div className="p-6 flex flex-col h-full">
 
-                <div className="flex items-center text-gray-600 mb-3">
-                  <MapPin className="w-4 h-4 mr-2 text-red-500" />
+                {/* Ubicación */}
+                <div className="flex items-center text-gray-300 mb-4">
+                  <MapPin className="w-5 h-5 mr-2 text-red-500" />
                   <span className="text-sm">{project.location}</span>
                 </div>
 
-                <p className="text-gray-700 text-sm mb-4 leading-relaxed">{project.description}</p>
+                {/* Descripción */}
+                <p className="text-gray-200 text-sm leading-relaxed mb-6">
+                  {project.description}
+                </p>
 
-                <div className="space-y-2 mt-auto">
-                  <div className="flex items-center text-gray-600">
-                    <Building className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{project.category}</span>
+                {/* Íconos del final — color BLANCO (como pediste) */}
+                <div className="mt-auto space-y-3">
+
+                  <div className="flex items-center text-white text-sm">
+                    <Building className="w-5 h-5 mr-2 text-white" />
+                    {project.category}
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{project.year}</span>
+
+                  <div className="flex items-center text-white text-sm">
+                    <Calendar className="w-5 h-5 mr-2 text-white" />
+                    {project.year}
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{project.duration}</span>
+
+                  <div className="flex items-center text-white text-sm">
+                    <Clock className="w-5 h-5 mr-2 text-white" />
+                    {project.duration}
                   </div>
+
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* antes: pegado al grid; ahora con separación clara */}
-        <div className="text-center max-w-3xl mx-auto mt-16 lg:mt-24">
-          <h2 className="text-3xl text-slate-200">¿Tienes un proyecto en mente?</h2>
-          <p className="text-2xl text-slate-100 mt-3">
-            Contáctanos para una consulta gratuita y descubre cómo podemos hacer realidad tu proyecto minero con la más alta calidad y eficiencia
+        {/* CTA FINAL */}
+        <div className="text-center max-w-3xl mx-auto mt-24 fade-up-slow">
+          <h3 className="text-3xl font-bold text-white">
+            ¿Tienes un proyecto en mente?
+          </h3>
+
+          <p className="text-xl text-gray-300 mt-4">
+            Te asesoramos para construir con calidad y eficiencia en cualquier entorno minero.
           </p>
-          <div className="mt-8 lg:mt-12 animate-fade-in-up delay-600">
+
+          <div className="mt-10">
             <Link
               href="#contacto"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700
+              text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               Consulta un Presupuesto
             </Link>
           </div>
         </div>
-      </section>
-    </div>
-  )
+      </div>
+    </section>
+  );
 }

@@ -1,182 +1,134 @@
-"use client"
+"use client";
+
 import Link from "next/link";
 import { equipment } from "@/utils/help";
+
 export default function EquipamientoComponent() {
-  
-
   return (
-    <>
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes scale-in {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 1s ease-out forwards;
-        }
-        
-        .animate-scale-in {
-          animation: scale-in 0.8s ease-out forwards;
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        
-        .delay-0 { animation-delay: 0ms; }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
-        .delay-600 { animation-delay: 600ms; }
-        .delay-1000 { animation-delay: 1000ms; }
-        .delay-2000 { animation-delay: 2000ms; }
-      `}</style>
+    <section
+      id="equipamiento"
+      className="relative overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-black py-24 px-4 sm:px-6 lg:px-12 text-white"
+    >
+      {/* 🌌 BACKGROUND DECORATION */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-32 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      </div>
 
-      <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-blue-800 to-blue-950 text-white" id="equipamiento">
-        {/* Background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-32 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-20 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/3 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className="max-w-7xl mx-auto relative">
+
+        {/* HEADER */}
+        <div className="text-center mb-20 fade-up">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Nuestro Equipamiento
+            </span>
+          </h2>
+          <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
+            Maquinaria de alta performance para garantizar precisión, eficiencia y seguridad en cada proyecto.
+          </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Section Header */}
-          <div className="text-center mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Nuestro Equipamiento
-              </span>
-            </h2>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up delay-200">
-              Maquinaria de última generación para garantizar la excelencia en cada proyecto
-            </p>
-          </div>
-
-          {/* Equipment Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {equipment.map((item, index) => (
-              <div
-                key={item.name}
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white group animate-scale-in border border-white/20 relative overflow-hidden"
-                style={{ animationDelay: item.delay }}
-              >
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon and Capacity */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 animate-float">
-                      <item.icon className="text-white" size={32} />
-                    </div>
-                    <div className="text-right">
-                      <span className="text-sm font-medium text-cyan-600 bg-cyan-50 px-3 py-1 rounded-full">
-                        {item.capacity}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Equipment Name */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-slate-800 mb-4 group-hover:text-slate-900 transition-colors">
-                    {item.name}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors">
-                    {item.description}
-                  </p>
-
-                  {/* Specifications */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wide">
-                      Especificaciones:
-                    </h4>
-                    <ul className="space-y-2">
-                      {item.specs.map((spec, specIndex) => (
-                        <li key={specIndex} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                          {spec}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link href="#contacto"className="flex-1 border-2 border-slate-300 text-slate-700 hover:border-cyan-400 hover:text-cyan-600 px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 bg-transparent text-sm text-center">
-                      Solicitar
-                    </Link>
-                  </div>
+        {/* GRID DE EQUIPOS */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 fade-up-delay">
+          {equipment.map((item, i) => (
+            <div
+              key={item.name}
+              className="group relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-xl 
+              hover:bg-white/20 hover:shadow-2xl transition-all duration-500 fade-up"
+              style={{ animationDelay: `${i * 150}ms` }}
+            >
+              {/* ICON + CAPACIÓN */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
+                  <item.icon size={34} className="text-white" />
                 </div>
+
+                <span className="text-sm font-medium bg-white/10 text-cyan-300 px-4 py-1 rounded-full">
+                  {item.capacity}
+                </span>
+              </div>
+
+              {/* NOMBRE */}
+              <h3 className="text-2xl font-semibold mb-3 group-hover:text-cyan-300 transition-colors">
+                {item.name}
+              </h3>
+
+              {/* DESCRIPCIÓN */}
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {item.description}
+              </p>
+
+              {/* ESPECIFICACIONES */}
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-cyan-300 mb-3">
+                  Especificaciones
+                </h4>
+
+                <ul className="space-y-2">
+                  {item.specs.map((spec, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300 text-sm">
+                      <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <Link
+                href="#contacto"
+                className="block text-center w-full py-3 rounded-xl font-semibold text-sm
+                border border-white/20 text-white 
+                hover:border-cyan-400 hover:text-cyan-300 hover:bg-white/10 transition-all"
+              >
+                Solicitar Información
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* STATS */}
+        <div className="mt-24 fade-up-slow">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { value: "50+", label: "Equipos Disponibles" },
+              { value: "24/7", label: "Soporte Técnico" },
+              { value: "18+", label: "Años de Experiencia" },
+              { value: "100%", label: "Mantenimiento Garantizado" },
+            ].map((s, index) => (
+              <div
+                key={s.label}
+                className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 text-center 
+                hover:bg-white/10 hover:scale-105 transition-all duration-300 fade-up"
+                style={{ animationDelay: `${500 + index * 150}ms` }}
+              >
+                <div className="text-3xl font-bold text-white">{s.value}</div>
+                <div className="text-gray-400 mt-1 text-sm">{s.label}</div>
               </div>
             ))}
           </div>
-
-          {/* Stats Section */}
-          <div className="mt-16 lg:mt-20">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-4xl mx-auto">
-              {[
-                { value: "50+", label: "Equipos Disponibles" },
-                { value: "24/7", label: "Soporte Técnico" },
-                { value: "18+", label: "Años de Experiencia" },
-                { value: "100%", label: "Mantenimiento Garantizado" },
-              ].map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                  style={{ animationDelay: `${600 + index * 100}ms` }}
-                >
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-gray-400 text-sm lg:text-base">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="text-center mt-16 lg:mt-20">
-            <div className="animate-fade-in-up delay-1000">
-              <p className="text-gray-300 text-lg mb-6">¿Necesitas equipamiento especializado para tu proyecto?</p>
-              <Link href="#contacto" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                Consultar Disponibilidad
-              </Link>
-            </div>
-          </div>
         </div>
 
-        {/* Floating elements */}
-        <div className="absolute top-1/4 left-8 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute top-2/3 right-12 w-3 h-3 bg-blue-500 rounded-full animate-ping delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-cyan-300 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping delay-2000"></div>
-      </section>
-    </>
-  )
+        {/* CTA FINAL */}
+        <div className="text-center mt-24 fade-up">
+          <p className="text-gray-300 text-lg mb-6">
+            ¿Necesitás equipamiento especializado para tu proyecto minero?
+          </p>
+          <Link
+            href="#contacto"
+            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700
+            text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+          >
+            Consultar Disponibilidad
+          </Link>
+        </div>
+      </div>
+
+      {/* DECORACIONES */}
+      <div className="absolute top-1/4 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-70"></div>
+      <div className="absolute bottom-1/3 right-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-70"></div>
+      <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-ping opacity-70"></div>
+    </section>
+  );
 }
