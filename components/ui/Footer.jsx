@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -125,15 +125,11 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/in/luis-guaymas-b93a7935/"
                 target="_blank"
-                className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-500 transition shadow-md"
+                rel="noreferrer"
+                className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-cyan-500 transition shadow-md text-white"
+                aria-label="LinkedIn"
               >
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5"
-                >
-                  <path d="M19 0h-14c-2.761..."></path>
-                </svg>
+                <FaLinkedinIn size={18} />
               </a>
 
               {/* WhatsApp */}

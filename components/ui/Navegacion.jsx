@@ -32,7 +32,7 @@ export default function Navegacion() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+      <nav className="max-w-[1350px] mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">

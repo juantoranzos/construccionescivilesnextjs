@@ -28,7 +28,7 @@ export const metadata = {
     "logística para minería",
     "Catamarca",
     "Noroeste Argentino",
-    "mantenimiento de maquinaria pesada"
+    "mantenimiento de maquinaria pesada",
   ],
   robots: {
     index: true,
@@ -64,7 +64,7 @@ export const metadata = {
     images: ["/og/construcciones-civiles.jpg"]
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo1.webp",
     apple: "/apple-touch-icon.png"
   },
   themeColor: "#0f172a"
