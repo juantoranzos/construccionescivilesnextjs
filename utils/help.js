@@ -30,13 +30,14 @@ export const equipment = [
   {
     icon: LiaTruckMonsterSolid,
     name: "Camionetas 4x4",
-    capacity: "1-2 toneladas",
+    capacity: "1 tonelada",
     description:
       "Vehículos todoterreno ideales para operaciones mineras y logísticas, capaces de desplazarse en terrenos difíciles.",
     specs: [
-      "Tracción 4x4 permanente",
-      "Capacidad de carga: 1-2 toneladas",
-      "Suspensión reforzada para uso minero",
+      "Internet Satelital (Starlink)",
+      "Monitoreo mediante dashcam integrada: Grabacion interior y exterior las 24hs",
+      "Sistema de deteccion de distraccion y alertas por voz",
+      "Sistema GPS integrado",
     ],
   },
   {
@@ -45,59 +46,51 @@ export const equipment = [
     capacity: "15-40 Toneladas",
     description:
       "Flota de camiones especializados para transporte de materiales en terrenos difíciles.",
-    specs: ["Tracción 6x4", "Volquete hidráulico", "Sistema GPS"],
+    specs: [
+      "Tracción 6x4",
+      "Internet Satelital (Starlink)",
+      "Monitoreo mediante dashcam integrada: Grabacion interior y exterior las 24hs",
+      "Sistema de deteccion de distraccion y alertas por voz",
+      "Sistema GPS integrado",
+    ],
     delay: "100ms",
   },
   {
     icon: HardHat,
-    name: "Retroexcavadoras",
+    name: "Equipos Viales",
     capacity: "Hasta 30m profundidad",
     description:
-      "Máquina versátil de construcción que excava, carga y nivela terrenos con gran precisión y eficiencia.",
+      "Maquinaria pesada para movimiento de suelos, apertura de caminos y compactación, diseñada para obras viales, proyectos mineros y trabajos en terrenos exigentes.",
     specs: [
-      "Peso operativo: entre 6.000 y 9.000 kg.",
-      "Profundidad de excavación: de 4 a 6 metros.",
+      "Profundidad de excavación: todas las magnitudes.",
       "Tracción: 4x2 o 4x4 según el terreno.",
+      "Capacidad operativa: trabajos continuos en faena",
     ],
     delay: "200ms",
   },
   {
     icon: Hammer,
-    name: "Excavadoras",
+    name: "Equipos de Izaje",
     capacity: "20-45 Toneladas",
     description:
-      "Excavadoras de alta potencia para movimiento de tierra y demoliciones.",
-    specs: ["Motor 300HP", "Brazo extensible", "Cabina ROPS/FOPS"],
+      "Soluciones seguras y certificadas para elevar y trasladar cargas y personal en operaciones mineras",
+    specs: ["Hidrogruas", "Autoelevadores", "Brazo Extensible", "Plataformas Tijera"],
     delay: "300ms",
-  },
-  {
-    icon: TbCarCrane,
-    name: "Grúa Hidráulica",
-    capacity: "30–120 toneladas",
-    description:
-      "Grúas móviles ideales para montaje industrial y minero, con brazo telescópico hidráulico y alta capacidad de elevación.",
-    specs: [
-      "Alcance horizontal extendido",
-      "Brazo telescópico hidráulico",
-      "Ángulo de giro 360°",
-      "Estabilizadores laterales (outriggers)",
-    ],
   },
   {
     icon: Zap,
     name: "Generadores",
-    capacity: "50-500 KVA",
-    description:
-      "Grupos electrógenos para suministro de energía en obras remotas.",
+    capacity: "15-60 KVA",
+    description: "Grupos electrógenos para suministro de energía en zonas remotas.",
     specs: ["Motor Diesel", "Arranque automático", "Panel de control"],
     delay: "500ms",
   },
   {
     icon: Bus,
-    name: "Trafic",
+    name: "Transporte de personal",
     capacity: "15 Pasajeros",
     description: "Transporte de personal para movilización en obra.",
-    specs: ["Capacidad 15 personas", "Peso 2800kg", "Asistencia a la conducción"],
+    specs: ["Trafic con capacidad para 15 personas", "Camionetas 4x4", "Internet satelital (Starlink)"],
     delay: "500ms",
   },
 ];
@@ -219,12 +212,6 @@ export const hitos = [
       "Obtuvimos nuestro primer contrato mayor con Minera Alumbrera.",
   },
   {
-    año: "2008",
-    titulo: "Certificaciones Internacionales",
-    descripcion:
-      "Logramos certificaciones ISO 9001 y OHSAS 18001.",
-  },
-  {
     año: "2012",
     titulo: "Diversificación de Servicios",
     descripcion:
@@ -240,7 +227,7 @@ export const hitos = [
     año: "2025",
     titulo: "Presente",
     descripcion:
-      "Empresa consolidada con más de 250 empleados y presencia en todo el NOA.",
+      "Empresa consolidada con más de 150 empleados y presencia en todo el NOA.",
   },
 ];
 

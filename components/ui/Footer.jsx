@@ -19,30 +19,13 @@ export default function Footer() {
         {/* Columna 1 – Info Empresa */}
         <div className="space-y-5 fade-up">
           <h3 className="text-2xl font-bold tracking-tight">
-            Construcciones Civiles S.R.L.
+            Construcciones Civiles
           </h3>
 
           <p className="text-gray-300 leading-relaxed text-sm">
             Soluciones integrales en servicios mineros.  
-            Más de 18 años liderando infraestructura en el NOA.
+            Más de 20 años liderando infraestructura en el NOA.
           </p>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-gray-400">
-              Certificaciones
-            </p>
-
-            <div className="flex flex-wrap gap-2 mt-2">
-              {["ISO 9001", "ISO 14001", "OHSAS 18001"].map((cert) => (
-                <span
-                  key={cert}
-                  className="px-3 py-1 text-xs rounded-lg bg-white/10 border border-white/20 shadow-sm"
-                >
-                  {cert}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Columna 2 – Servicios */}
@@ -111,7 +94,9 @@ export default function Footer() {
 
             <li className="flex items-start gap-3">
               <Clock className="text-cyan-400 shrink-0" size={20} />
-              Lun - Vie: 8:00 - 14:00  
+              Lun - Vie: 8:00 - 13:00 y 17:00 - 21:00
+              <br />
+              Sáb: 9:00 - 13:00
               <br />
               Emergencias 24/7
             </li>
@@ -151,7 +136,7 @@ export default function Footer() {
       {/* LOWER FOOTER */}
       <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between text-sm text-gray-400 max-w-7xl mx-auto fade-up">
         <p>
-          © {new Date().getFullYear()} Construcciones Civiles S.R.L. Todos los
+          © {new Date().getFullYear()} Construcciones Civiles Todos los
           derechos reservados.
         </p>
 

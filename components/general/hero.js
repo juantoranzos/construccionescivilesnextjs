@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function HeroComponent() {
   const stats = [
-    { icon: Calendar, value: "18+", label: "Años de Experiencia" },
+    { icon: Calendar, value: "20+", label: "Años de Experiencia" },
     { icon: Building, value: "300+", label: "Proyectos Exitosos" },
     { icon: Users, value: "50+", label: "Profesionales" },
     { icon: Award, value: "100%", label: "Satisfacción" },
@@ -39,7 +39,7 @@ export default function HeroComponent() {
 
           {/* SUBTITLE */}
           <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed fade-up-delay max-w-3xl mx-auto mb-10">
-            Más de 18 años construyendo infraestructura crítica en la región del NOA y la zona Precordillerana.
+            Más de 20 años construyendo infraestructura crítica en la región del NOA y la zona Precordillerana.
           </p>
 
           {/* LOCATION */}

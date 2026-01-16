@@ -28,7 +28,7 @@ export default function HistoriaComponent() {
             </span>
           </h2>
           <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Más de 18 años liderando la construcción para la industria minera,
+            Más de 20 años liderando la construcción para la industria minera,
             con innovación, solidez y compromiso en cada proyecto.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function HistoriaComponent() {
 
               <p className="text-gray-300 leading-relaxed mb-4">
                 De un equipo inicial de 12 colaboradores, hoy contamos con más de
-                250 profesionales altamente capacitados: ingenieros, técnicos y
+                150 profesionales altamente capacitados: ingenieros, técnicos y
                 operarios certificados.
               </p>
 
@@ -116,11 +116,7 @@ export default function HistoriaComponent() {
                 </div>
                 <div className="flex items-center">
                   <Users className="w-5 h-5 mr-3 text-cyan-400" />
-                  250+ empleados especializados.
-                </div>
-                <div className="flex items-center">
-                  <Award className="w-5 h-5 mr-3 text-cyan-400" />
-                  Certificaciones ISO 9001, 14001 y 45001.
+                  150+ empleados especializados.
                 </div>
               </div>
             </div>

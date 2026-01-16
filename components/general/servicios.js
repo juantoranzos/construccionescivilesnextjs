@@ -15,7 +15,7 @@ export default function ServiciosComponent() {
     {
       icon: HardHat,
       title: "Construcción Minera",
-      description: "Infraestructura especializada para proyectos extractivos, exploración y obras de gran porte.",
+      description: "Desarrollo de infraestructura para minería: campamentos, tinglados, redes contra incendio y obras civiles",
       delay: 0,
     },
     {
@@ -23,6 +23,12 @@ export default function ServiciosComponent() {
       title: "Logística y Transporte",
       description: "Soluciones de movilidad para zonas remotas, accesos complejos y transporte operativo.",
       delay: 150,
+    },
+    {
+      icon: Building2,
+      title: "Mantenimiento de Edificios",
+      description: "Mantenimiento de estructuras civiles, industriales, campamentos y plantas.",
+      delay: 750,
     },
     {
       icon: Mountain,
@@ -33,21 +39,15 @@ export default function ServiciosComponent() {
     {
       icon: Shield,
       title: "Seguridad Industrial",
-      description: "Protocolos operativos alineados a normas ISO y estándares de clase mundial.",
+      description: "Protocolos operativos alineados a estándares de calidad mundial.",
       delay: 450,
     },
     {
       icon: Settings,
       title: "Mantenimiento Industrial",
-      description: "Servicios mecánicos y preventivos para mantener tus máquinas al máximo rendimiento.",
+      description: "Servicios mecánicos y preventivos para mantener máquinas industriales al máximo rendimiento.",
       delay: 600,
-    },
-    {
-      icon: Building2,
-      title: "Mantenimiento de Edificios",
-      description: "Soluciones integrales para operaciones industriales, campamentos y plantas.",
-      delay: 750,
-    },
+    }
   ];
 
   return (

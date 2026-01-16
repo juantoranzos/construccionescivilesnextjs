@@ -94,7 +94,7 @@ export default function EquipamientoComponent() {
             {[
               { value: "50+", label: "Equipos Disponibles" },
               { value: "24/7", label: "Soporte Técnico" },
-              { value: "18+", label: "Años de Experiencia" },
+              { value: "20+", label: "Años de Experiencia" },
               { value: "100%", label: "Mantenimiento Garantizado" },
             ].map((s, index) => (
               <div
