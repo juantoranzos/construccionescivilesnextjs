@@ -66,8 +66,11 @@ export const metadata = {
   icons: {
     icon: "/logo1.webp",
     apple: "/apple-touch-icon.png"
-  },
-  themeColor: "#0f172a"
+  }
+};
+
+export const viewport = {
+  themeColor: "#0f172a",
 };
 
 
@@ -78,9 +81,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navegacion/>
+        <Navegacion />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
