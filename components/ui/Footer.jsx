@@ -140,7 +140,7 @@ export default function Footer() {
           derechos reservados.
         </p>
 
-        <p className="text-gray-300">Powered by AuraSoft</p>
+        <p className="text-gray-300">Powered by <a href="https://www.albalabs.dev/" target="_blank">AlbaLabs</a> </p>
 
         <div className="flex gap-4">
           <Link href="/privacidad" className="hover:text-cyan-400">
