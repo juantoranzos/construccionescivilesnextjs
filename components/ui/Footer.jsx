@@ -6,14 +6,7 @@ import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 text-white pt-20 pb-10 px-6 lg:px-12 overflow-hidden">
-
-      {/* Luces de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-400/10 blur-3xl rounded-full"></div>
-      </div>
-
+    <footer className="relative text-white pt-20 pb-10 px-6 lg:px-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
         {/* Columna 1 – Info Empresa */}

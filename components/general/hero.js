@@ -14,15 +14,8 @@ export default function HeroComponent() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-800 text-white pt-28 lg:pt-36 pb-28"
+      className="relative overflow-hidden text-white pt-28 lg:pt-36 pb-28"
     >
-      {/* Background Atmosphere */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-blue-400/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      </div>
-
       <div className="section-shell relative">
         <div className="text-center max-w-5xl mx-auto">
 
@@ -33,7 +26,7 @@ export default function HeroComponent() {
             </span>
             <br />
             <span className="text-white">
-              para la industria minera
+              para la industria minera en Catamarca
             </span>
           </h1>
 
@@ -91,12 +84,6 @@ export default function HeroComponent() {
           </div>
         </div>
       </div>
-
-      {/* Floating particles */}
-      <div className="pointer-events-none absolute top-1/4 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-      <div className="pointer-events-none absolute top-1/3 right-20 w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
-      <div className="pointer-events-none absolute bottom-1/4 left-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-ping"></div>
-      <div className="pointer-events-none absolute top-1/2 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
     </section>
   );
 }

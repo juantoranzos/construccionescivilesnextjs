@@ -16,7 +16,7 @@ export default function HistoriaComponent() {
   return (
     <section
       id="historia"
-      className="bg-gradient-to-br from-blue-900 via-blue-950 to-black py-24 px-4 sm:px-6 lg:px-12"
+      className="py-24 px-4 sm:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
 

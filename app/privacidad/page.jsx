@@ -7,16 +7,18 @@ const CONTACT_EMAIL = "privacidad@construccionesciviles.com"; // TODO
 const CONTACT_PHONE = "+54 3838 602867"; // TODO
 const POSTAL_ADDRESS = "Dr Fernandez, K4139 Santa María, Catamarca"; // TODO
 const LAST_UPDATED = "23/10/2025"; // actualizar cuando cambie la política
-const SITE_URL = "https://construccionesciviles.com";
-
-
+const SITE_URL = "https://www.construccionesciviles.com";
+export const metadata = {
+  title: "Política de Privacidad",
+  alternates: { canonical: "/privacidad" },
+};
 
 export default function PrivacyPolicyPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "PrivacyPolicy",
     name: "Política de Privacidad",
-    url: `${SITE_URL}/politica-de-privacidad`,
+    url: `${SITE_URL}/privacidad`,
     publisher: {
       "@type": "Organization",
       name: LEGAL_NAME,

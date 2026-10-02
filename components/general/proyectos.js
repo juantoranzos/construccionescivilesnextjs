@@ -9,14 +9,8 @@ export default function ProyectosComponent() {
   return (
     <section
       id="proyectos"
-      className="relative bg-gradient-to-b from-blue-900 via-blue-950 to-blue-900 py-24 px-6 lg:px-12 text-white overflow-hidden"
+      className="relative py-24 px-6 lg:px-12 text-white overflow-hidden"
     >
-      {/* Luces de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-24 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="relative max-w-7xl mx-auto">
 
         <div className="text-center mb-20 fade-up">

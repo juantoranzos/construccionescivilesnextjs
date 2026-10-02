@@ -50,7 +50,7 @@ export default function ContactoComponent() {
     {
       icon: Clock,
       title: "Horarios",
-      content: "Lun - Vie: 8:00 - 14:00\nSáb: 8:00 - 12:00",
+      content: "Lun - Vie: 8:00 - 13:00 y 17:00 - 21:00\nSáb: 9:00 - 13:00\nEmergencias 24/7",
       delay: 450,
     },
   ];
@@ -58,14 +58,8 @@ export default function ContactoComponent() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-800 py-24 px-4 sm:px-6 lg:px-12 text-white"
+      className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-12 text-white"
     >
-      {/* BACKGROUND LIGHTS */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-32 right-24 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-24 left-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto relative">
 
         {/* HEADER */}
@@ -215,11 +209,6 @@ export default function ContactoComponent() {
         </div>
 
       </div>
-
-      {/* FLOATING PARTICLES */}
-      <div className="absolute top-1/4 left-8 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-      <div className="absolute top-2/3 right-12 w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-cyan-300 rounded-full animate-ping"></div>
     </section>
   );
 }

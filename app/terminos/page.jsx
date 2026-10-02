@@ -7,17 +7,19 @@ const CUIT = "20-17289258-3"; // TODO
 const CONTACT_EMAIL = "legal@construccionesciviles.com"; // TODO
 const CONTACT_PHONE = "+54 3838 602867"; // TODO
 const POSTAL_ADDRESS = "Dr Fernandez, K4139 Santa María, Catamarca"; // TODO
-const SITE_URL = "https://construccionesciviles.com"; // TODO
+const SITE_URL = "https://www.construccionesciviles.com";
 const LAST_UPDATED = "23/10/2025"; // actualizar cuando cambie
-
-
+export const metadata = {
+  title: "Términos y Condiciones",
+  alternates: { canonical: "/terminos" },
+};
 
 export default function TermsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "TermsOfService",
     name: "Términos y Condiciones",
-    url: `${SITE_URL}/terminos-y-condiciones`,
+    url: `${SITE_URL}/terminos`,
     publisher: {
       "@type": "Organization",
       name: LEGAL_NAME,

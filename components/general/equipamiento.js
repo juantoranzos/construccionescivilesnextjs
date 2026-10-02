@@ -7,14 +7,8 @@ export default function EquipamientoComponent() {
   return (
     <section
       id="equipamiento"
-      className="relative overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-black py-24 px-4 sm:px-6 lg:px-12 text-white"
+      className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-12 text-white"
     >
-      {/* 🌌 BACKGROUND DECORATION */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-32 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto relative">
 
         {/* HEADER */}
@@ -124,11 +118,6 @@ export default function EquipamientoComponent() {
           </Link>
         </div>
       </div>
-
-      {/* DECORACIONES */}
-      <div className="absolute top-1/4 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-70"></div>
-      <div className="absolute bottom-1/3 right-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-70"></div>
-      <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-ping opacity-70"></div>
     </section>
   );
 }

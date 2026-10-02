@@ -28,7 +28,7 @@ export default function Navegacion() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg"
+          ? "bg-blue-950/95 backdrop-blur-xl shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -37,15 +37,11 @@ export default function Navegacion() {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-cyan-400 to-blue-600">
-            <Image src={logo} alt="logo" className="rounded-xl object-cover" />
+            <Image src={logo} alt="Logo de Construcciones Civiles" className="rounded-xl object-cover" />
           </div>
-          <h1
-            className={`hidden sm:block text-lg lg:text-2xl font-bold transition-colors ${
-              isScrolled ? "text-white" : "text-white"
-            }`}
-          >
+          <span className="hidden sm:block text-lg lg:text-2xl font-bold text-white">
             CONSTRUCCIONES CIVILES
-          </h1>
+          </span>
         </Link>
 
         {/* DESKTOP NAV */}
@@ -68,7 +64,7 @@ export default function Navegacion() {
         <button
           onClick={() => setIsMenuOpen(true)}
           className={`lg:hidden p-2 rounded-lg transition-all ${
-            isScrolled ? "text-gray-800 hover:bg-gray-200/40" : "text-white hover:bg-white/10"
+            "text-white hover:bg-white/10"
           }`}
         >
           <Menu size={26} />
@@ -85,7 +81,7 @@ export default function Navegacion() {
 
       {/* MOBILE MENU DRAWER */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-slate-900/95 backdrop-blur-xl border-l border-white/10 z-50
+        className={`fixed top-0 right-0 h-full w-64 bg-blue-950 border-l border-white/10 z-50
         transition-transform duration-500 p-6 flex flex-col gap-6 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
